@@ -1,0 +1,8 @@
+name: slashdupe
+version: '${version}'
+main: me.lava.slashdupe.Slashdupe
+api-version: 1.19
+commands:
+  dupe:
+    description: Duplicates the item you are holding
+    usage: /<command>
