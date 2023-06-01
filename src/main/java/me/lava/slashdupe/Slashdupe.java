@@ -8,11 +8,17 @@ public final class Slashdupe extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Objects.requireNonNull(this.getCommand("dupe")).setExecutor(new DupeCmd());
+        saveDefaultConfig(); // Save the config.yml to the plugins folder
+
+        Objects.requireNonNull(this.getCommand("dupe")).setExecutor(new DupeCmd(this));
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    /**
+     * Get a section of the config with a string
+     * @param path Path to config section
+     * @return The value stored at the path
+     */
+    public String getConfigString(String path) {
+        return getConfig().getString(path);
     }
 }

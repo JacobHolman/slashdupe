@@ -1,0 +1,5 @@
+# Sent when the player runs /dupe with no item in their hand
+no-item-in-hand: "&cYou must be holding an item to dupe."
+
+# Sent when the player's item in hand is successfully duped
+duped-item-in-hand: "&cItem in your hand was duplicated!"
